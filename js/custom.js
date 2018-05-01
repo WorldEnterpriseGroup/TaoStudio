@@ -440,8 +440,9 @@ jQuery(document).ready(function() {
 
 	counter();
 	
+	/* Remove Switcher
 	addSwitcher();
-	
+	*/
 	jQuery('.tp-bgimg').after("<div class='overlay-row'></div>");
 	
 	/* Video responsive function */	
