@@ -7733,14 +7733,14 @@ button.scroltop {
 }
 .yoga-footer .footer-top .saf-footer {
     padding: 50px 30px 20px;
-    background-color: #6f3662;
+    background-color: #3396d1;
 }
 .yoga-footer .footer-top {
     padding-bottom: 0;
 }
 .yoga-footer .footer-top,
 .yoga-footer .footer-bottom {
-    background-color: #5F2652
+    background-color: #2D7FB1
 }
 .yoga-footer .widget {
     margin-bottom: 0;
@@ -7750,7 +7750,7 @@ button.scroltop {
     margin: 0px auto 30px;
 }
 .yoga-footer .newsletter input[type="text"] {
-    background-color: #6F3662;
+    background-color: #3396d1;
     border: 0;
     border-radius: 30px !important;
 }
