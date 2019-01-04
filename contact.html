@@ -359,7 +359,7 @@
                             <div class="icon-bx-sm bg-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-envelope"></i></a> </div>
                             <div class="icon-content">
                                 <h6>Email</h6>
-                                <p>demo@gmail.com</p>
+                                <p>info@taostudio.org</p>
                             </div>
                         </div>
                     </div>
@@ -377,30 +377,44 @@
                 <div class="row">
                     <!-- Contact form start -->
                     <div class="col-md-6">
-						<h4>Contact form</h4>
+						<h4>Contact Us</h4>
                         <div class="dzFormMsg"></div>
 						<div class="p-a30 bg-white clearfix m-b30">
-                            <form method="post" class="dzForm" action="http://dexignzone.com/zone/YogaZone/xhtml/script/contact.php">
+                            <form method="post" class="dzForm" enctype="application/json" action="https://prod-06.centralus.logic.azure.com:443/workflows/af46420b1fdb4385b32484fcf8ded45c/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5MISIUOWM4_JmgwKBd4RI3rgsNtA25Cf_Fn2FsFVlGQ" >
 							<input type="hidden" value="Contact" name="dzToDo" >
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <div class="input-group"> <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                                <input id="contact_name" name="dzName" type="text" required class="form-control ">
+                                                <input id="firstname" name="firstname" type="text" required class="form-control "  placeholder="First Name">
+                                            </div>
+                                        </div>
+                                    </div>
+									<div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input id="lastname" name="lastname" type="text" required class="form-control "  placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                    </div>
+									<div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-group"> <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                                <input id="phone" name="phone" type="text" required class="form-control ">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <div class="input-group"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                                <input id="contact_email" name="dzEmail" type="email" class="form-control" required >
+                                                <input id="contact_email" name="email" type="email" class="form-control" required >
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <div class="input-group"> <span class="input-group-addon v-align-t"><i class="fa fa-pencil"></i></span>
-                                                <textarea id="contact_text" name="dzMessage" rows="4" class="form-control" required ></textarea>
+                                                <textarea id="contact_text" name="message" rows="4" class="form-control" required ></textarea>
                                             </div>
                                         </div>
                                     </div>
