@@ -49,6 +49,19 @@
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">  
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,800italic,800,700italic' rel='stylesheet' type='text/css'>
+
+<script src='https://www.google.com/recaptcha/api.js?render=6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO'></script>
+
+<script>
+	grecaptcha.ready(function() {
+	grecaptcha.execute('6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO', {action: 'Leads'})
+	.then(function(token) {
+	var recaptchaResponse = document.getElementById('recaptchaResponse');
+	recaptchaResponse.value = token;
+	// Verify the token on the server.
+	});
+	});
+</script>
 </head>
 <body id="bg">
 <div class="page-wraper">    <!-- header -->
@@ -418,6 +431,15 @@
                                             </div>
                                         </div>
                                     </div>
+									<div class="g-recaptcha"
+									data-sitekey="6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO"
+									data-callback="onSubmit"
+									data-size="invisible">
+								</div>
+
+								<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+								<input type="text" name="_gotcha" style="display:none" />
+								
                                     <div class="col-md-12">
                                         <button name="submit" type="submit" value="Submit" class="site-button "> <span>Submit</span> </button>
                                         <button name="Resat" type="reset" value="Reset"  class="site-button  m-l30"> <span>Reset</span> </button>
