@@ -73,26 +73,26 @@
 						</div>
 						<div class="tab-content p-b30">
 							<div class="tab-pane active ">
-								<form class="dez-form p-b30" enctype='application/json' method="POST" action="https://prod-01.eastus.logic.azure.com:443/workflows/8a428578d58348b6bb79faadd105be3c/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=cNjnAoDbYO6HcBStQnAxY41C72UuqhMy18_KjvpAXr8" id="register" data-toggle="validator" novalidate="true">
+								<form class="dez-form p-b30" enctype='application/json' method="POST" action="https://prod-20.eastus.logic.azure.com:443/workflows/a8bed9230a7445338ffbbecaa103ec67/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=tz8jPn70VwbD7XM6aZw6T2gNB_sxAutBWp5I-hKv6cA" id="register" data-toggle="validator" novalidate="true">
 									<h3 class="form-title m-t0">Apply Here</h3>
 									<div class="dez-separator-outer m-b5">
 										<div class="dez-separator bg-primary style-liner"></div>
 									</div>
 									<p>Request access to our online network and take our digital intro class to qualify for attendance.</p>
 									<div class="form-group col-md-6">
-										<input name="firstname" required="" class="form-control required" placeholder="First Name" type="text"/>
+										<input name="firstname" required="required" class="form-control required" placeholder="First Name" type="text"/>
 									</div>
 									<div class="form-group col-md-6">
-										<input name="lastname" required="" class="form-control required" placeholder="Last Name" type="text"/>
+										<input name="lastname" required="required" class="form-control required" placeholder="Last Name" type="text"/>
 									</div>
 									<div class="form-group col-md-6">
-										<input name="email" required="" class="form-control required" placeholder="Email" type="email"/>
+										<input name="email" required="required" class="form-control required" placeholder="Email" type="email"/>
 									</div>
 									<div class="form-group col-md-6">
 										<input name="tel" required="" class="form-control " placeholder="Phone Number" type="text"/>
 									</div>
 									<div class="form-group col-md-12">
-										<input name="link" required="" class="form-control " placeholder="Social Media Link" type="text"/>
+										<input name="link"  class="form-control " placeholder="Social Media Link" type="text"/>
 									</div>
 									
 									<div class="form-group col-sm-6">
@@ -117,16 +117,16 @@
 									</select>
 									</div>
 									<div class="form-group col-md-12">
-										<textarea id="information" name="information" class="form-control" rows="4" placeholder="Tell us why you'd like to join."></textarea>
+										<textarea id="information" name="information" required="required" class="form-control required" rows="4" placeholder="Tell us why you'd like to join."></textarea>
 									</div>
 									<div class="form-group text-left col-md-12">
 										<label>
-											<input id="policy_terms" name="policy_terms" type="checkbox" class="required" value="Yes"/>
+											<input id="policy_terms" name="policy_terms" required="required" type="checkbox" class="required" value="Yes"/>
 											<label for="policy_terms">I agree to the <a href="#">Terms of Service </a>& <a href="#">Privacy Policy</a> </label>
 										</label>
 
 										<label>
-											<input id="marketing" name="marketing" type="checkbox" class="required" value="Yes" checked="checked"/>
+											<input id="marketing" name="marketing" type="checkbox" class="required" checked="checked"/>
 											<label for="marketing">I would like to be added to the Newsletters &amp; Updates.</label>
 										</label>
 									</div>
@@ -137,7 +137,9 @@
 									</div>
 									<input type="hidden" name="topic" value="Application">
 									<input type="hidden" name="owner" value="b6cea309-1949-ea11-a812-000d3a5937f3">
-            						<input type="hidden" name="website" value="https://taostudio.org">
+									<input type="hidden" name="website" value="https://taostudio.org">
+									<input type="hidden" name="budget" value="30000">
+									<input type="hidden" name="campaign" value="Tao Studio">
 
 									<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 									<input type="text" name="_gotcha" style="display:none" />
@@ -148,7 +150,7 @@
 
 									<div class="margin-bottom-50 col-md-12"><br></div>
 
-									<p><em>Note: We will respond to those who seem like an appropriate fit for our .</em></p>
+									<p class="form-group"><em>Note: We will only respond to those who seem like an appropriate fit for our program. We suggest those new to mindfulness to <a href="https://ignitecuriosity.org" target="_blank">Ignite your Curiosity</a> with our partner.</em></p>
 								</form>
 								
 							</div>
@@ -280,15 +282,15 @@ document.getElementById("register").addEventListener("submit", function(event){
                 $("#register")[0].reset();
                 $("input:checkbox").attr('checked', false);
                 Swal({
-                title: '<strong>Registration Successful</strong>',
+                title: '<strong>Application Sent</strong>',
                 type: 'success',
                 html:
-                    'Check your email for Login details.<br>Account available within 5 minutes.',
+                    'We will reply if you seem like a good fit for our academy. Thank you for considering us.',
                 showCloseButton: true,
                 focusConfirm: false,
                 confirmButtonText:
-                    '<a style="color: white" href="https://login.microsoftonline.com/?whr=taolearning.org"><i class="fa fa-address-card"></i> Login</a>',
-                confirmButtonAriaLabel: 'Login',
+                    '<a style="color: white" href="https://taostudio.org"><i class="fas fa-check"></i> OK</a>',
+                confirmButtonAriaLabel: 'OK',
             });
                 console.log('Submission was successful.');
                 console.log(data);
