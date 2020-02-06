@@ -68,31 +68,34 @@
 				</div>
 				<div class="col-md-4 bg-white z-index2 relative skew-section left-bottom winHeight">
 					<div class="login-form style-2">
-						<div class="top-head p-tb20 m-b50">
+						<div class="top-head p-tb20 m-b30">
 							<a href="index.html"><img src="images/logo.svg"/></a>
 						</div>
 						<div class="tab-content p-b30">
 							<div class="tab-pane active ">
-								<form class="dez-form p-b30" enctype='application/json' method="POST" action="https://prod-29.centralus.logic.azure.com:443/workflows/d83845ce58634cd9a482767223ed1302/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Em_94N9NBsDzZBW1VLYdq5jU_Mffqiiq_AAa7PKuYPc" id="register" data-toggle="validator" novalidate="true">
+								<form class="dez-form p-b30" enctype='application/json' method="POST" action="https://prod-01.eastus.logic.azure.com:443/workflows/8a428578d58348b6bb79faadd105be3c/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=cNjnAoDbYO6HcBStQnAxY41C72UuqhMy18_KjvpAXr8" id="register" data-toggle="validator" novalidate="true">
 									<h3 class="form-title m-t0">Apply Here</h3>
 									<div class="dez-separator-outer m-b5">
 										<div class="dez-separator bg-primary style-liner"></div>
 									</div>
-									<p>Get access to our online network and take our intro class to qualify for attendance.</p>
-									<div class="form-group">
+									<p>Request access to our online network and take our digital intro class to qualify for attendance.</p>
+									<div class="form-group col-md-6">
 										<input name="firstname" required="" class="form-control required" placeholder="First Name" type="text"/>
 									</div>
-									<div class="form-group">
+									<div class="form-group col-md-6">
 										<input name="lastname" required="" class="form-control required" placeholder="Last Name" type="text"/>
 									</div>
-									<div class="form-group">
+									<div class="form-group col-md-6">
 										<input name="email" required="" class="form-control required" placeholder="Email" type="email"/>
 									</div>
-									<div class="form-group">
+									<div class="form-group col-md-6">
 										<input name="tel" required="" class="form-control " placeholder="Phone Number" type="text"/>
 									</div>
+									<div class="form-group col-md-12">
+										<input name="link" required="" class="form-control " placeholder="Social Media Link" type="text"/>
+									</div>
 									
-									<div class="form-group">
+									<div class="form-group col-sm-6">
 									<select class="form-control required" name="location" id="location">
 										<option value="" selected>Select your location</option>
 										<option value="Africa">Africa</option>
@@ -103,9 +106,9 @@
 										<option value="South America">South America</option>
 									</select>
 									</div>
-									<div class="form-group">
-									<select class="form-control required" name="interest" id="current_level" >
-										<option value="General Fine Arts" selected>Select Program Interest</option>
+									<div class="form-group col-sm-6">
+									<select class="form-control required" name="interest" id="interest" >
+										<option value="General Fine Arts" selected>Select Program</option>
 										<option value="Semester">Semester of Sacred Movement</option>
 										<option value="Bachelor of Fine Arts">Bachelor of Fine Arts</option>
 										<option value="Master of Fine Arts">Master of Fine Arts</option>
@@ -113,33 +116,39 @@
 										<option value="Dual Degree">Dual Degree MBA/MFA</option>
 									</select>
 									</div>
-									<div class="form-group">
-										<textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell everyone a little about yourself."></textarea>
+									<div class="form-group col-md-12">
+										<textarea id="information" name="information" class="form-control" rows="4" placeholder="Tell us why you'd like to join."></textarea>
 									</div>
-									<div class="form-group text-left">
-								
-									
-									<label>
-										<input id="policy_terms" name="policy_terms" type="checkbox" class="required" value="Yes"/>
-										<label for="policy_terms">I agree to the <a href="#">Terms of Service </a>& <a href="#">Privacy Policy</a> </label>
-									</label>
-										
+									<div class="form-group text-left col-md-12">
+										<label>
+											<input id="policy_terms" name="policy_terms" type="checkbox" class="required" value="Yes"/>
+											<label for="policy_terms">I agree to the <a href="#">Terms of Service </a>& <a href="#">Privacy Policy</a> </label>
+										</label>
+
+										<label>
+											<input id="marketing" name="marketing" type="checkbox" class="required" value="Yes" checked="checked"/>
+											<label for="marketing">I would like to be added to the Newsletters &amp; Updates.</label>
+										</label>
 									</div>
 									<div class="g-recaptcha"
 										data-sitekey="6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO"
 										data-callback="onSubmit"
 										data-size="invisible">
 									</div>
+									<input type="hidden" name="topic" value="Application">
+									<input type="hidden" name="owner" value="b6cea309-1949-ea11-a812-000d3a5937f3">
+            						<input type="hidden" name="website" value="https://taostudio.org">
+
 									<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 									<input type="text" name="_gotcha" style="display:none" />
 									
 									<input type="text" style="display:none" name="test" value="off">
 
-									<div class="text-left bottom"> <button id="create" type="submit" class="btn btn-primary ">Create an Account</button> </div>
+									<div class="text-left bottom col-md-12"> <button id="create" type="submit" class="btn btn-primary ">Submit Application</button> </div>
 
-									<div class="margin-bottom-50"><br></div>
+									<div class="margin-bottom-50 col-md-12"><br></div>
 
-									<p><em>Note: Download <a class="text-primary" href="https://teams.microsoft.com" target="_blank">Microsoft Teams</a> once you have registered and login using the credentials we email you.</em></p>
+									<p><em>Note: We will respond to those who seem like an appropriate fit for our .</em></p>
 								</form>
 								
 							</div>
