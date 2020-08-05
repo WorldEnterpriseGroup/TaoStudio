@@ -43,19 +43,6 @@
 
 <script src='https://www.google.com/recaptcha/api.js?render=6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO'></script>
 
-<script>
-	grecaptcha.ready(function() {
-	grecaptcha.execute('6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO', {action: 'Tao Studio Application'})
-	.then(function(token) {
-	var recaptchaResponse = document.getElementById('recaptchaResponse');
-	recaptchaResponse.value = token;
-	// Verify the token on the server.
-	});
-	});
-</script>
-
-
-
 </head>
 <body id="bg">
 <div class="page-wraper">
@@ -143,6 +130,7 @@
 
 									<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 									<input type="text" name="_gotcha" style="display:none" />
+									<input type="hidden" name="token" value="">
 									
 									<input type="text" style="display:none" name="test" value="off">
 
@@ -265,44 +253,60 @@ $("#register").validate();
 document.getElementById("register").addEventListener("submit", function(event){
 	event.preventDefault(); //prevent default action 
     if (!$("#register").validate().form()) {
-    return false; //doesn't validate
+		swal.fire({
+			title: "Form Error",
+			text: "Please ensure all fields are correct!",
+			type: "error",
+			confirmButtonText: "Ok",
+		})
+    	return false; //doesn't validate
     }else
     {
      event.preventDefault(); //prevent default action 
     var post_url = $(this).attr("action"); //get form action url
     var request_method = $(this).attr("method"); //get form GET/POST method
     var content_type = $(this).attr("enctype"); //get form GET/POST method
-    var form_data = $(this).serialize(); //Encode form elements for submission
-    
-    $.ajax({
-            type: $(this).attr('method'),
-            url: $(this).attr('action'),
-            data: $(this).serialize(),
-            success: function (data) {
-                $("#register")[0].reset();
-                $("input:checkbox").attr('checked', false);
-                Swal({
-                title: '<strong>Application Sent</strong>',
-                type: 'success',
-                html:
-                    'We will reply if you seem like a good fit for our academy. Thank you for considering us.',
-                showCloseButton: true,
-                focusConfirm: false,
-                confirmButtonText:
-                    '<a style="color: white" href="https://taostudio.org"><i class="fas fa-check"></i> OK</a>',
-                confirmButtonAriaLabel: 'OK',
-            });
-                console.log('Submission was successful.');
-                console.log(data);
-                
-            },
-            error: function (data) {
-                console.log('An error occurred.');
-                console.log(data);
-            },
-        }).then(function(response){ //
-        $("#server-results").html(response);
-    }); //end of validation else
+	var form_data = $(this).serialize(); //Encode form elements for submission
+	var method = $(this).attr('method');
+	var url = $(this).attr('action');
+	
+	grecaptcha.ready(function () {
+			grecaptcha.execute("6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO").then(function (token) {
+				document.querySelector('input[name=token]').value = token;
+				document.getElementById('recaptchaResponse').value = token;
+				$.ajax({
+					type:method,
+					url: url,
+					data: $('form#register').serialize(),
+					success: function (data) {
+						$("#register")[0].reset();
+						$("input:checkbox").attr('checked', false);
+						Swal({
+						title: '<strong>Application Sent</strong>',
+						type: 'success',
+						html:
+							'We will reply if you seem like a good fit for our academy. Thank you for considering us.',
+						showCloseButton: true,
+						focusConfirm: false,
+						confirmButtonText:
+							'<a style="color: white" href="https://taostudio.org"><i class="fas fa-check"></i> OK</a>',
+						confirmButtonAriaLabel: 'OK',
+					});
+						console.log('Submission was successful.');
+						console.log(data);
+						
+					},
+					error: function (data) {
+						console.log('An error occurred.');
+						console.log(data);
+					},
+				}).then(function(response){ //
+				$("#server-results").html(response);
+			}); 
+			})
+		})
+
+    //end of validation else
     }
         
 });
