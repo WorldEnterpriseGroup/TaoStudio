@@ -38,9 +38,19 @@
 <!-- Revolution Navigation Style -->
 <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
 <!-- Google fonts -->
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,800italic,800,700italic' rel='stylesheet' type='text/css'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:400,100,300,300italic,400italic,500,500italic,700,700italic,900italic,900|Open+Sans:400,300,300italic,400italic,600,600italic,700,800italic,800,700italic&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:400,100,300,300italic,400italic,500,500italic,700,700italic,900italic,900|Open+Sans:400,300,300italic,400italic,600,600italic,700,800italic,800,700italic&amp;display=swap"></noscript>
+<!-- Hero: paint the first slide from CSS and reserve the slider box so nothing shifts when Revolution Slider initialises -->
+<style>
+.main-slider.default-banner,#dz_rev_slider_wrapper{background:#fff url(images/main-slider/tango2.webp) center center/cover no-repeat}
+.main-slider.default-banner{aspect-ratio:480/600}
+@media (min-width:480px){.main-slider.default-banner{aspect-ratio:778/800}}
+@media (min-width:778px){.main-slider.default-banner{aspect-ratio:1024/800}}
+@media (min-width:1024px){.main-slider.default-banner{aspect-ratio:1240/800}}
+@media (min-width:1240px){.main-slider.default-banner{aspect-ratio:auto;height:800px}}
+</style>
 </head>
 <body id="bg">
 <div class="page-wraper">
@@ -680,7 +690,7 @@
 						</div>
 						<div class="col-md-4 col-sm-4 text-center ">
 							<div class="worker">
-								<a href="https://silkyoga.org" target="_blank"><img src="images/pilates2.webp"/></a>
+								<a href="https://silkyoga.org" target="_blank"><img src="images/pilates2.webp" width="515" height="493" decoding="async"/></a>
 								<a href="https://silkyoga.org" target="_blank" class="site-button radius-xl m-r15" >SILK Yoga</a> 
 							</div>
 						</div>
@@ -728,7 +738,7 @@
 						<div class="img-carousel-content mfp-gallery gallery owl-btn-center-lr">
 							<div class="item">
 								<div class="ow-carousel-entry">
-									<div class="ow-entry-media dez-img-effect zoom-slow"> <a href="#"><img src="images/our-services/pilates.webp" alt=""></a> </div>
+									<div class="ow-entry-media dez-img-effect zoom-slow"> <a href="#"><img src="images/our-services/pilates.webp" alt="" width="700" height="466" loading="lazy" decoding="async"></a> </div>
 									<div class="ow-entry-content p-a15">
 										<div class="ow-entry-title"><h4 class="m-tb0"><a href="#">Intro to Pilates</a></h4></div>
 										<div class="ow-entry-text">
@@ -744,7 +754,7 @@
 							</div>
 							<div class="item">
 								<div class="ow-carousel-entry">
-									<div class="ow-entry-media dez-img-effect zoom-slow"> <a href="#"><img src="images/our-services/yoga.webp" alt=""></a> </div>
+									<div class="ow-entry-media dez-img-effect zoom-slow"> <a href="#"><img src="images/our-services/yoga.webp" alt="" width="700" height="466" loading="lazy" decoding="async"></a> </div>
 									<div class="ow-entry-content p-a15">
 										<div class="ow-entry-title"><h4 class="m-tb0"><a href="#">Intro to Yoga</a></h4></div>
 										<div class="ow-entry-text">
@@ -760,7 +770,7 @@
 							</div>
 							<div class="item">
 								<div class="ow-carousel-entry">
-									<div class="ow-entry-media dez-img-effect zoom-slow"> <a href="#"><img src="images/our-services/tango.webp" alt=""></a> </div>
+									<div class="ow-entry-media dez-img-effect zoom-slow"> <a href="#"><img src="images/our-services/tango.webp" alt="" width="700" height="466" loading="lazy" decoding="async"></a> </div>
 									<div class="ow-entry-content p-a15">
 										<div class="ow-entry-title"><h4 class="m-tb0"><a href="#">Tango For Beginners</a></h4></div>
 										<div class="ow-entry-text">
@@ -776,7 +786,7 @@
 							</div>
 							<div class="item">
 								<div class="ow-carousel-entry">
-									<div class="ow-entry-media dez-img-effect zoom-slow"> <a href="#"><img src="images/our-services/dance.webp" alt=""></a> </div>
+									<div class="ow-entry-media dez-img-effect zoom-slow"> <a href="#"><img src="images/our-services/dance.webp" alt="" width="700" height="466" loading="lazy" decoding="async"></a> </div>
 									<div class="ow-entry-content p-a15">
 										<div class="ow-entry-title"><h4 class="m-tb0"><a href="#">Intro to Ballroom</a></h4></div>
 										<div class="ow-entry-text">
@@ -792,7 +802,7 @@
 							</div>	
 							<div class="item">
 								<div class="ow-carousel-entry">
-									<div class="ow-entry-media dez-img-effect zoom-slow"> <a href="#"><img src="images/our-services/wellness.webp" alt=""></a> </div>
+									<div class="ow-entry-media dez-img-effect zoom-slow"> <a href="#"><img src="images/our-services/wellness.webp" alt="" width="699" height="466" loading="lazy" decoding="async"></a> </div>
 									<div class="ow-entry-content p-a15">
 										<div class="ow-entry-title"><h4 class="m-tb0"><a href="#">Wellness Consultation</a></h4></div>
 										<div class="ow-entry-text">
@@ -828,7 +838,7 @@
 			</div>
 			<div class="section-content clearfix our-gallery">
 				<div class="col-md-3 col-sm-6 p-lr0">
-					<div class="dez-media dez-img-effect zoom"> <img src="images/gallery/yogabusiness.webp" alt=""/>
+					<div class="dez-media dez-img-effect zoom"> <img src="images/gallery/yogabusiness.webp" alt="" width="601" height="854" loading="lazy" decoding="async"/>
 						<div class="dez-info-has p-a20 bg-primary text-center">
 							<div class="media-box">
 								<h3 class="h3"><span class="text-white">Business Intelligence</span></h3>
@@ -840,7 +850,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 p-lr0">
-					<div class="dez-media dez-img-effect zoom"> <img src="images/gallery/styling.webp" alt="">
+					<div class="dez-media dez-img-effect zoom"> <img src="images/gallery/styling.webp" alt="" width="600" height="856" loading="lazy" decoding="async">
 						<div class="dez-info-has p-a20 bg-primary text-center">
 							<div class="media-box">
 								<h3 class="h3"><span class="text-white">Mindfulness</span></h3>
@@ -853,7 +863,7 @@
 				</div>
 				<div class="col-md-6 col-sm-12 p-lr0">
 					<div class="col-md-6 col-sm-6 p-lr0">
-						<div class="dez-media dez-img-effect zoom"> <img src="images/gallery/legs.webp" alt="">
+						<div class="dez-media dez-img-effect zoom"> <img src="images/gallery/legs.webp" alt="" width="479" height="342" loading="lazy" decoding="async">
 							<div class="dez-info-has p-a20 bg-primary text-center">
 								<div class="media-box">
 									<h3 class="h3"><span class="text-white">Sacred Movement</span></h3>
@@ -865,7 +875,7 @@
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6 p-lr0">
-						<div class="dez-media dez-img-effect zoom"> <img src="images/gallery/fitness1.webp" alt="">
+						<div class="dez-media dez-img-effect zoom"> <img src="images/gallery/fitness1.webp" alt="" width="479" height="342" loading="lazy" decoding="async">
 							<div class="dez-info-has p-a20 bg-primary text-center">
 								<div class="media-box">
 									<h3 class="h3"><span class="text-white">Performance</span></h3>
@@ -877,7 +887,7 @@
 						</div>
 					</div>
 					<div class="col-md-12 col-sm-12 p-lr0">
-						<div class="dez-media dez-img-effect zoom"> <img src="images/gallery/dance.webp" alt="">
+						<div class="dez-media dez-img-effect zoom"> <img src="images/gallery/dance.webp" alt="" width="960" height="342" loading="lazy" decoding="async">
 							<div class="dez-info-has p-a20 bg-primary text-center">
 								<div class="media-box">
 									<h3 class="h3"><span class="text-white">Vibrational Therapy</span></h3>
@@ -912,7 +922,7 @@
 							<li data-filter="home" class="card-container col-lg-6 col-md-6 col-sm-6 col-xs-6 m-b30">
 							<div class="dez-box m-b30 hover dez-img-effect zoom-slow">
 								<div class="dez-media"> 
-									<a href="javascript:;"> <img width="358" height="460" alt="" src="images/our-team/matao.webp"> </a>
+									<a href="javascript:;"> <img width="358" height="460" alt="" src="images/our-team/matao.webp" loading="lazy" decoding="async"> </a>
 								</div>
 								<div class="p-lr20">
 									<div class="p-a10 bg-primary dez-box-team">
@@ -933,7 +943,7 @@
 							<li data-filter="office" class="card-container col-lg-6 col-md-6 col-sm-6 col-xs-6 m-b30">
 							<div class="dez-box m-b30 hover dez-img-effect zoom-slow">
 								<div class="dez-media"> <a href="javascript:;"> 
-									<img width="358" height="460" alt="" src="images/our-team/sunshine2.webp"> </a>
+									<img width="358" height="460" alt="" src="images/our-team/sunshine2.webp" loading="lazy" decoding="async"> </a>
 								</div>
 								<div class="p-lr20">
 									<div class="p-a10 bg-primary dez-box-team">
@@ -971,7 +981,7 @@
 						<div class="blog-carousel mfp-gallery gallery owl-btn-center-lr">
 							<div class="item equal-col m-b30">
 								<div class="ow-blog-post date-style-2">
-									<div class="ow-post-media dez-img-effect zoom-slow"> <img src="images/our-services/bundle.webp" alt=""> </div>
+									<div class="ow-post-media dez-img-effect zoom-slow"> <img src="images/our-services/bundle.webp" alt="" width="700" height="466" loading="lazy" decoding="async"> </div>
 									<div class="ow-post-info ">
 										<div class="ow-post-title">
 											<h2 class="post-title"> <a href="#" title="Video post">Podcast Listening</a> </h2>
@@ -991,7 +1001,7 @@
 							</div>	
 							<div class="item equal-col m-b30">
 								<div class="ow-blog-post date-style-2">
-									<div class="ow-post-media dez-img-effect zoom-slow"> <img src="images/our-services/pushhands.webp" alt=""> </div>
+									<div class="ow-post-media dez-img-effect zoom-slow"> <img src="images/our-services/pushhands.webp" alt="" width="700" height="466" loading="lazy" decoding="async"> </div>
 									<div class="ow-post-info ">
 										<div class="ow-post-title">
 											<h2 class="post-title"> <a href="https://www.youtube.com/watch?v=FVtNLwundu4&list=PL85A0D94D65415A51" title="Video post">Dance &amp; Yoga Videos</a> </h2>
@@ -1011,7 +1021,7 @@
 							</div>
 							<div class="item equal-col m-b30">
 								<div class="ow-blog-post date-style-2">
-									<div class="ow-post-media dez-img-effect zoom-slow"> <img src="images/our-services/tangobook.webp" alt=""> </div>
+									<div class="ow-post-media dez-img-effect zoom-slow"> <img src="images/our-services/tangobook.webp" alt="" width="703" height="466" loading="lazy" decoding="async"> </div>
 									<div class="ow-post-info ">
 										<div class="ow-post-title">
 											<h2 class="post-title"> <a href="https://www.goodreads.com/review/list/31506074-matt-hackney?shelf=themov-recommends" title="Book List">Mindful Material</a> </h2>
@@ -1072,12 +1082,12 @@
                             <h2 class="m-b15">Gallery</h2>
 							<div class="dez-separator bg-primary"></div>
 							<ul>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="images/gallery/pic1.webp" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="images/gallery/pic2.webp" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="images/gallery/pic3.webp" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="images/gallery/pic4.webp" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="images/gallery/pic5.webp" alt=""></a> </li>
-								<li class="img-effect2"> <a href="javascript:void(0);"><img src="images/gallery/pic6.webp" alt=""></a> </li>
+								<li class="img-effect2"> <a href="javascript:void(0);"><img src="images/gallery/pic1.webp" alt="" width="480" height="430" loading="lazy" decoding="async"></a> </li>
+								<li class="img-effect2"> <a href="javascript:void(0);"><img src="images/gallery/pic2.webp" alt="" width="480" height="430" loading="lazy" decoding="async"></a> </li>
+								<li class="img-effect2"> <a href="javascript:void(0);"><img src="images/gallery/pic3.webp" alt="" width="480" height="430" loading="lazy" decoding="async"></a> </li>
+								<li class="img-effect2"> <a href="javascript:void(0);"><img src="images/gallery/pic4.webp" alt="" width="480" height="430" loading="lazy" decoding="async"></a> </li>
+								<li class="img-effect2"> <a href="javascript:void(0);"><img src="images/gallery/pic5.webp" alt="" width="480" height="430" loading="lazy" decoding="async"></a> </li>
+								<li class="img-effect2"> <a href="javascript:void(0);"><img src="images/gallery/pic6.webp" alt="" width="480" height="430" loading="lazy" decoding="async"></a> </li>
 							</ul>
                         </div>
                     </div>
